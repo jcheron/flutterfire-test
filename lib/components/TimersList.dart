@@ -22,12 +22,13 @@ class TimersList extends StatelessWidget {
           return ListView.builder(
             shrinkWrap: true,
             padding: const EdgeInsets.all(20),
+
             itemCount: querySnapshot.docs.length,
             itemBuilder: (context, index) {
               // Access the User instance
               Timer timer = querySnapshot.docs[index].data;
 
-              return Text('Timer name: ${timer.name}');
+              return Card(child:ListTile(title:Text('Timer name: ${timer.name}')));
             },
           );
         }

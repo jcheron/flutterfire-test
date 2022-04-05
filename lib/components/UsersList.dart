@@ -22,7 +22,12 @@ class UsersList extends StatelessWidget {
               // Access the User instance
               User user = querySnapshot.docs[index].data;
 
-              return Text('User name: ${user.name}, age ${user.age}');
+              return Card(
+                color: Colors.amber[index*100],
+                  child:ListTile(
+                      title:Text('User name: ${user.name}, age ${user.age}')
+                  )
+              );
             },
           );
         }
