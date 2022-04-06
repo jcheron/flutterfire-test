@@ -11,7 +11,7 @@ class TimersList extends StatelessWidget {
         ref: timersRef,
         builder: (context, AsyncSnapshot<TimerQuerySnapshot> snapshot, Widget? child) {
           if (snapshot.hasError) {
-          log(snapshot.error.toString());
+            log(snapshot.error.toString());
             return Text('Something went wrong!');
           }
           if (!snapshot.hasData) return Text('Loading timers...');

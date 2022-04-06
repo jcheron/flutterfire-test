@@ -42,7 +42,7 @@ class Timer {
     visible: json["visible"]??false,
     ordre: json["ordre"]??0,
   );
-  t.activationDate=DateTime.tryParse(json["activationDate"])!;
+  t.activationDate=DateTime.tryParse(json["activationDate"]??'');
   return t;
 }
 
